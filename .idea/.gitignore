@@ -1,3 +1,72 @@
-# Default ignored files
-/shelf/
-/workspace.xml
+# Archivos de sistema y metadatos
+.DS_Store
+Thumbs.db
+
+# Configuración de IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+/uiDesigner.xml
+
+# Archivos de compilación de Gradle
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Archivos de configuración local
+.gradle/
+*.gradle
+.gradle-cache/
+
+# Configuración de ejecución y depuración de IntelliJ
+*.run/
+
+# Archivos generados por el sistema operativo
+*.log
+*.tmp
+*.lock
+*.pid
+*.swp
+*.swo
+*.bak
+*.old
+
+# Dependencias descargadas automáticamente
+out/
+libs/
+
+# Archivos de configuración personal
+*.class
+*.jar
+*.war
+*.ear
+*.bat
+*.sh
+
+# Archivos de configuración específicos para tu entorno local
+.env
+*.env
+
+# Cobertura de pruebas
+coverage/
+test-results/
+test-output/
+
+# Archivos de caché
+*.~*~
+*.orig
+
+# Bases de datos de búsqueda de IntelliJ
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries/
+.idea/modules.xml
+
+# Archivos temporales creados por IntelliJ
+.idea/libraries/
+.idea/misc.xml
+
+# Archivos de configuración de compilación temporal
+*.project
+*.classpath
+*.cproject

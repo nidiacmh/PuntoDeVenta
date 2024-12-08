@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class PedidoTest {
     @Test
@@ -95,5 +96,12 @@ public class PedidoTest {
 
         assertEquals(costoTotal, pedido.calcularTotalSinDescuento());
         assertEquals(costoTotal, pedido.calcularTotalConDescuento());
+    }
+
+    @Test
+    void testEstrategiaDeDescuentoInvalida() {
+        Descuento descuento = null;
+        Pedido pedido = new Pedido();
+        assertThrows(Exception.class, () -> pedido.setEstrategiaDescuento(descuento));
     }
 }

@@ -15,7 +15,9 @@ public class Pedido {
         this.estrategiaDescuento = new SinDescuento(); // si no se asigna no hay descuento
     }
 
-    public void setEstrategiaDescuento(Descuento estrategiaDescuento) {
+    public void setEstrategiaDescuento(Descuento estrategiaDescuento) throws Exception {
+        if (estrategiaDescuento == null)
+            throw new Exception("la estrategia no puede ser nula");
         this.estrategiaDescuento = estrategiaDescuento;
     }
 

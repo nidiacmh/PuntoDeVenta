@@ -99,6 +99,20 @@ public class OrdenTest {
     }
 
     @Test
+    void obtenTotalDeProductos() throws Exception {
+        Orden orden = new Orden();
+        double precioLaptop = 35000.0;
+        double precioTablet = 25000.0;
+        Producto laptop = new Producto("Laptop", precioLaptop);
+        Producto tablet = new Producto("Tablet", precioTablet);
+
+        orden.agregarProducto(laptop);
+        orden.agregarProducto(tablet);
+
+        assertEquals(2, orden.getNumeroDeProductos());
+    }
+
+    @Test
     void testEstrategiaDeDescuentoInvalida() {
         Descuento descuento = null;
         Orden orden = new Orden();

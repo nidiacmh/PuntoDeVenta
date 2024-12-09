@@ -31,6 +31,11 @@ public class Orden{
     }
 
     public double calcularTotalSinDescuento() {
+        // toma la lista de productos
+        // transforma en stream para poder manipularla
+        // declara que se convertira de lista de productos a un double
+        // obten solo el atributo precio de cada producto
+        // con la lista de double obtenida, suma todos los elementos y retorna el valor
         return productos.stream().mapToDouble(Producto::getPrecio).sum();
     }
 

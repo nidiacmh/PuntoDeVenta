@@ -1,5 +1,9 @@
 package org.carolina.reporte;
 
+/*
+* Se crea una clase abtracta que implementa una interfaz Reporte pra hacer uso del patron de diseño Decorator
+* de esta manera podemos implementar diferentes reportes reutilizando el metodo generarReporte del padre.
+* */
 public abstract class DecoradorReporte implements Reporte {
     protected final Reporte reporteDecorado;
 

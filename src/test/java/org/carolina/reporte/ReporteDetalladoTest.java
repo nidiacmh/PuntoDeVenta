@@ -1,5 +1,7 @@
 package org.carolina.reporte;
 
+import org.carolina.descuento.DescuentoClienteFrecuente;
+import org.carolina.descuento.DescuentoTemporada;
 import org.carolina.orden.Orden;
 import org.carolina.orden.Producto;
 import org.junit.jupiter.api.Test;
@@ -14,6 +16,27 @@ public class ReporteDetalladoTest {
         Reporte reporte = new ReporteDetallado(new ReporteSimple(orden), orden);
         String resultado = reporte.generar();
         assertEquals("Total: 35000.0\nDetalle de descuentos: $0.0", resultado);
+    }
 
+    @Test
+    void testGenerarReporteDetalladoConDescuentoClienteFrecuente() throws Exception {
+        Orden orden = new Orden();
+        orden.agregarProducto(new Producto("Laptop", 35000.0));
+        orden.setEstrategiaDescuento(new DescuentoClienteFrecuente());
+        Reporte reporte = new ReporteDetallado(new ReporteSimple(orden), orden);
+        String resultado = reporte.generar();
+        assertEquals("Total: 29750.0\n" +
+                "Detalle de descuentos: $5250.0", resultado);
+    }
+
+    @Test
+    void testGenerarReporteDetalladoConDescuentoTemporada() throws Exception {
+        Orden orden = new Orden();
+        orden.agregarProducto(new Producto("Laptop", 35000.0));
+        orden.setEstrategiaDescuento(new DescuentoTemporada());
+        Reporte reporte = new ReporteDetallado(new ReporteSimple(orden), orden);
+        String resultado = reporte.generar();
+        assertEquals("Total: 31500.0\n" +
+                "Detalle de descuentos: $3500.0", resultado);
     }
 }

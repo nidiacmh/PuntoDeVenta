@@ -4,6 +4,17 @@ public class Producto {
     private String nombre;
     private double precio;
 
+    public Producto(String nombre, double precio) throws Exception {
+        validarPrecio(precio);
+        this.nombre = nombre;
+        this.precio = precio;
+    }
+
+    private static void validarPrecio(double precio) throws Exception {
+        if (precio <= 0)
+            throw new Exception("El precio debe ser mayor a cero");
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -16,12 +27,8 @@ public class Producto {
         return precio;
     }
 
-    public void setPrecio(double precio) {
-        this.precio = precio;
-    }
-
-    public Producto(String nombre, double precio) {
-        this.nombre = nombre;
+    public void setPrecio(double precio) throws Exception {
+        validarPrecio(precio);
         this.precio = precio;
     }
 }

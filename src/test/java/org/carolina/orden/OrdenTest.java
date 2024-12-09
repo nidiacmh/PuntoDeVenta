@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class OrdenTest {
     @Test
-    void testAgregarPedido(){
+    void testAgregarPedido() throws Exception {
         Orden orden = new Orden();
         Producto producto = new Producto("Celular", 18000.0);
         orden.agregarProducto(producto);
@@ -24,7 +24,7 @@ public class OrdenTest {
     }
 
     @Test
-    void testCalcularTotalSinDescuento(){
+    void testCalcularTotalSinDescuento() throws Exception {
         Orden orden = new Orden();
         double precioLaptop = 35000.0;
         double precioTablet = 25000.0;

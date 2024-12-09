@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ReporteExtendidoTest {
     @Test
-    void testGenerarReporteExtendido() throws Exception {
+    void testGenerarReporteExtendidoSinDescuento() throws Exception {
         Orden orden = new Orden();
         orden.agregarProducto(new Producto("Laptop", 35000.0));
         //orden.setEstrategiaDescuento(new DescuentoClienteFrecuente());

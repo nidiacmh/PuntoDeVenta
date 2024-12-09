@@ -11,6 +11,8 @@ public class ReporteExtendido extends DecoradorReporte {
 
     @Override
     public String generar() throws Exception {
-        return super.generar() + "\nEstadisticas adicionales: \nNumero de productos: " + orden.getNumeroDeProductos();
+        return super.generar() + "\n" +
+                "Estadisticas adicionales: \n" +
+                "Numero de productos: " + orden.getNumeroDeProductos();
     }
 }

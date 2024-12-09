@@ -7,8 +7,8 @@ import org.carolina.descuento.SinDescuento;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Orden {
-    private List<Producto> productos = new ArrayList<>();
+public class Orden{
+    private final List<Producto> productos = new ArrayList<>();
     private Descuento estrategiaDescuento;
 
     public Orden() {
@@ -36,5 +36,8 @@ public class Orden {
 
     public double calcularTotalConDescuento() throws Exception {
         return estrategiaDescuento.aplicarDescuento(calcularTotalSinDescuento());
+    }
+    public int getNumeroDeProductos() {
+        return productos.size();
     }
 }

@@ -7,11 +7,11 @@ import org.carolina.descuento.SinDescuento;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Pedido {
+public class Orden {
     private List<Producto> productos = new ArrayList<>();
     private Descuento estrategiaDescuento;
 
-    public Pedido() {
+    public Orden() {
         this.estrategiaDescuento = new SinDescuento(); // si no se asigna no hay descuento
     }
 

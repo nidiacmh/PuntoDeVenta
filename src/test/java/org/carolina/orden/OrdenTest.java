@@ -1,5 +1,6 @@
 package org.carolina.orden;
 
+import org.carolina.GeneradorDeProductos;
 import org.carolina.descuento.Descuento;
 import org.carolina.descuento.DescuentoClienteFrecuente;
 import org.carolina.descuento.DescuentoTemporada;
@@ -21,6 +22,15 @@ public class OrdenTest {
 
         assertEquals(1, productos.size());
         assertEquals("Celular", productos.get(0).getNombre());
+    }
+
+    @Test
+    void testAgregarPedidos()  {
+        Orden orden = new Orden();
+        orden.agregarProductos(GeneradorDeProductos.generarListaDeProductos(5));
+        List<Producto> productos = orden.getProductos();
+
+        assertEquals(5, productos.size());
     }
 
     @Test

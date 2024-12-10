@@ -27,6 +27,9 @@ public class Orden {
     public void agregarProducto(Producto producto) {
         productos.add(producto);
     }
+    public void agregarProductos(List<Producto> listaProductos) {
+        productos.addAll(listaProductos);
+    }
 
     public List<Producto> getProductos() {
         return productos;
@@ -50,5 +53,9 @@ public class Orden {
 
     public String aceptar(Exportador visitor) throws JsonProcessingException {
         return visitor.exportar(this);
+    }
+
+    public double getDescuento(){
+        return estrategiaDescuento.getDescuento();
     }
 }

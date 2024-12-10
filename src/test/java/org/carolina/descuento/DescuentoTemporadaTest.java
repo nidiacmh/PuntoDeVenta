@@ -25,4 +25,9 @@ public class DescuentoTemporadaTest {
         Descuento descuento = new DescuentoTemporada();
         assertThrows(Exception.class, () -> descuento.aplicarDescuento(-1));
     }
+    @Test
+    void testObtenerDescuento(){
+        Descuento descuento = new DescuentoTemporada();
+        assertEquals(0.1, descuento.getDescuento());
+    }
 }

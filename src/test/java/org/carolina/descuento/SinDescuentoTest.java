@@ -18,4 +18,10 @@ public class SinDescuentoTest {
         Descuento descuento = new SinDescuento();
         assertThrows(Exception.class, () -> descuento.aplicarDescuento(-1));
     }
+
+    @Test
+    void testObtenerDescuento(){
+        Descuento descuento = new SinDescuento();
+        assertEquals(0.0, descuento.getDescuento());
+    }
 }

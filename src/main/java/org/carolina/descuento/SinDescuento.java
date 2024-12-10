@@ -7,4 +7,9 @@ public class SinDescuento implements Descuento {
             throw new Exception("Precio invalido");
         return precioTotal;
     }
+
+    @Override
+    public double getDescuento() {
+        return 0.0;
+    }
 }

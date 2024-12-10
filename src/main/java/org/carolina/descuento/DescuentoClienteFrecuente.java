@@ -10,4 +10,9 @@ public class DescuentoClienteFrecuente implements Descuento {
             throw new Exception("Precio Invalido");
         return precioTotal - (precioTotal * DESCUENTO_CLIENTE_FRECUENTE);
     }
+
+    @Override
+    public double getDescuento() {
+        return DESCUENTO_CLIENTE_FRECUENTE;
+    }
 }

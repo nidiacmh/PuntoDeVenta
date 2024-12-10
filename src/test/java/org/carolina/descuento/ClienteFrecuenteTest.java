@@ -25,4 +25,10 @@ public class ClienteFrecuenteTest {
         Descuento descuento = new DescuentoClienteFrecuente();
         assertThrows(Exception.class, () -> descuento.aplicarDescuento(-1));
     }
+
+    @Test
+    void testObtenerDescuento(){
+        Descuento descuento = new DescuentoClienteFrecuente();
+        assertEquals(0.15, descuento.getDescuento());
+    }
 }

@@ -17,7 +17,8 @@ public class ReporteExtendidoTest {
         String resultado = reporte.generar();
         assertEquals("""
                 Total: 35000.0
-                Detalle de descuentos: $0.0
+                Total de descuentos: $0.00
+                Descuento aplicado: 0%\s
                 Estadisticas adicionales:\s
                 Numero de productos: 1""", resultado);
     }
@@ -31,7 +32,8 @@ public class ReporteExtendidoTest {
         String resultado = reporte.generar();
         assertEquals("""
                 Total: 29750.0
-                Detalle de descuentos: $5250.0
+                Total de descuentos: $5250.00
+                Descuento aplicado: 15%\s
                 Estadisticas adicionales:\s
                 Numero de productos: 1""", resultado);
     }
@@ -45,7 +47,8 @@ public class ReporteExtendidoTest {
         String resultado = reporte.generar();
         assertEquals("""
                 Total: 31500.0
-                Detalle de descuentos: $3500.0
+                Total de descuentos: $3500.00
+                Descuento aplicado: 10%\s
                 Estadisticas adicionales:\s
                 Numero de productos: 1""", resultado);
     }

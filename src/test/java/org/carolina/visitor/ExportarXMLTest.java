@@ -16,7 +16,7 @@ public class ExportarXMLTest {
         Exportador exportador = new ExportarXML();
         String resultado = exportador.exportar(orden);
 
-        System.out.println(resultado);
+        //System.out.println(resultado);
 
         assertTrue(resultado.contains("<nombre>Laptop</nombre>"));
         assertTrue(resultado.contains("<precio>35000.0</precio>"));

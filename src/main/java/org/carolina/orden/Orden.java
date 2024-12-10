@@ -1,13 +1,15 @@
 package org.carolina.orden;
 
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.carolina.descuento.Descuento;
 import org.carolina.descuento.SinDescuento;
+import org.carolina.visitor.Exportador;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Orden{
+public class Orden {
     private final List<Producto> productos = new ArrayList<>();
     private Descuento estrategiaDescuento;
 
@@ -44,5 +46,9 @@ public class Orden{
     }
     public int getNumeroDeProductos() {
         return productos.size();
+    }
+
+    public String aceptar(Exportador visitor) throws JsonProcessingException {
+        return visitor.exportar(this);
     }
 }

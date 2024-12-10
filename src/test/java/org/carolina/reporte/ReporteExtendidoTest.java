@@ -16,7 +16,7 @@ public class ReporteExtendidoTest {
         Reporte reporte = new ReporteExtendido(new ReporteDetallado(new ReporteSimple(orden), orden), orden);
         String resultado = reporte.generar();
         assertEquals("""
-                Total: 35000.0
+                Total: $35000.00
                 Total de descuentos: $0.00
                 Descuento aplicado: 0%\s
                 Estadisticas adicionales:\s
@@ -31,7 +31,7 @@ public class ReporteExtendidoTest {
         Reporte reporte = new ReporteExtendido(new ReporteDetallado(new ReporteSimple(orden), orden), orden);
         String resultado = reporte.generar();
         assertEquals("""
-                Total: 29750.0
+                Total: $29750.00
                 Total de descuentos: $5250.00
                 Descuento aplicado: 15%\s
                 Estadisticas adicionales:\s
@@ -46,7 +46,7 @@ public class ReporteExtendidoTest {
         Reporte reporte = new ReporteExtendido(new ReporteDetallado(new ReporteSimple(orden), orden), orden);
         String resultado = reporte.generar();
         assertEquals("""
-                Total: 31500.0
+                Total: $31500.00
                 Total de descuentos: $3500.00
                 Descuento aplicado: 10%\s
                 Estadisticas adicionales:\s

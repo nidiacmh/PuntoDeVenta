@@ -10,6 +10,6 @@ public class ReporteSimple implements Reporte {
 
     @Override
     public String generar() throws Exception {
-        return "Total: " + orden.calcularTotalConDescuento();
+        return "Total: $" +  String.format("%.2f", orden.calcularTotalConDescuento());
     }
 }

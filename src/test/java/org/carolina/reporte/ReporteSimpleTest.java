@@ -15,7 +15,7 @@ public class ReporteSimpleTest {
         orden.agregarProducto(new Producto("Laptop", 35000.0));
         Reporte reporte = new ReporteSimple(orden);
         String resultado = reporte.generar();
-        assertEquals("Total: 35000.0", resultado);
+        assertEquals("Total: $35000.00", resultado);
     }
 
     @Test
@@ -25,7 +25,7 @@ public class ReporteSimpleTest {
         orden.setEstrategiaDescuento(new DescuentoClienteFrecuente());
         Reporte reporte = new ReporteSimple(orden);
         String resultado = reporte.generar();
-        assertEquals("Total: 29750.0", resultado);
+        assertEquals("Total: $29750.00", resultado);
     }
 
     @Test
@@ -35,6 +35,6 @@ public class ReporteSimpleTest {
         orden.setEstrategiaDescuento(new DescuentoTemporada());
         Reporte reporte = new ReporteSimple(orden);
         String resultado = reporte.generar();
-        assertEquals("Total: 31500.0", resultado);
+        assertEquals("Total: $31500.00", resultado);
     }
 }
